@@ -84,8 +84,6 @@ git clone https://github.com/notbell1/nttbell-assistant
 cd nttbell-assistant
 ```
 
-> Ganti URL repository di atas dengan URL repository Nttbell Assistant yang sebenarnya.
-
 ---
 
 # ⚙️ Install Dependencies
@@ -196,11 +194,11 @@ Extension sekarang siap digunakan pada WhatsApp Web.
 
 Buka WhatsApp Web menggunakan Google Chrome.
 
-### 2. Temukan Nttbell
+### 2. Temukan Nttbell Assistant
 
 Setelah extension aktif, menu **Nttbell Assistant** akan muncul pada navigasi WhatsApp Web, tepat di bawah **Meta AI**.
 
-### 3. Buka Nttbell
+### 3. Buka Nttbell Assistant
 
 Klik menu **Nttbell Assistant** untuk membuka halaman pengaturan privacy.
 
@@ -268,7 +266,7 @@ chrome.storage.local
 
 Tidak diperlukan:
 
-- Akun Nttbell
+- Akun Login
 - Database
 - Backend
 - Server eksternal
