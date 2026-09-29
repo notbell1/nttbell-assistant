@@ -1,5 +1,13 @@
 # 🛡️ Nttbell Assistant - WhatsApp Web Privacy Extension (v1.0)
 
+## 📸 Preview
+
+Nttbell Assistant membantu menjaga privasi percakapan dengan memburamkan informasi sensitif pada WhatsApp Web.
+
+<p align="center">
+  <img src="screenshots/blur.jpeg" alt="Nttbell Assistant Privacy Blur" width="900">
+</p>
+
 Nttbell Assistant adalah ekstensi peramban (_browser extension_) yang dirancang untuk membantu menjaga privasi layar saat menggunakan WhatsApp Web di tempat umum, lingkungan kerja, kampus, maupun ruang bersama.
 
 Nttbell Assistant bekerja dengan memberikan lapisan perlindungan visual berupa efek _blur_ pada informasi tertentu di WhatsApp Web. Pengguna dapat memilih kategori informasi yang ingin dilindungi dan menyesuaikan tingkat _blur_ sesuai kebutuhan.
