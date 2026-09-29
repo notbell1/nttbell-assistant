@@ -1,0 +1,551 @@
+﻿/* ==========================================
+   VARIABEL TEMA (LIGHT & DARK MODE)
+========================================== */
+:root {
+  --nttbell-bg: #ffffff;
+  --nttbell-surface: #f4f5f7;
+  --nttbell-surface-hover: #ebeef0;
+  --nttbell-text: #111b21;
+  --nttbell-muted: #667781;
+  --nttbell-border: rgba(11, 20, 26, 0.08);
+  --nttbell-border-light: rgba(11, 20, 26, 0.04);
+  --nttbell-icon-bg: #e9edef;
+  --nttbell-switch-off: #cbd5e1;
+  --nttbell-scrollbar: rgba(11, 20, 26, 0.12);
+
+  /* Gradien Premium Sunset (Merah - Oranye) */
+  --nttbell-accent-grad: linear-gradient(135deg, #ff7a00 0%, #ff004d 100%);
+  --nttbell-accent-solid: #ff004d;
+  --nttbell-accent-glow: rgba(255, 0, 77, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nttbell-bg: #111b21;
+    --nttbell-surface: #202c33;
+    --nttbell-surface-hover: #2a3942;
+    --nttbell-text: #e9edef;
+    --nttbell-muted: #8696a0;
+    --nttbell-border: rgba(255, 255, 255, 0.08);
+    --nttbell-border-light: rgba(255, 255, 255, 0.03);
+    --nttbell-icon-bg: #374045;
+    --nttbell-switch-off: #475569;
+    --nttbell-scrollbar: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* ==========================================
+   TRIGGER BUTTON LAYOUT (SIDEBAR WA)
+========================================== */
+[data-nttbell="wrapper"] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+button[data-nttbell="navbar-item"] {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--nttbell-muted);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+button[data-nttbell="navbar-item"]:hover {
+  background: var(--nttbell-icon-bg);
+}
+
+button[data-nttbell="navbar-item"]:active {
+  transform: scale(0.92);
+}
+
+button[data-nttbell="navbar-item"][aria-pressed="true"] {
+  background: rgba(255, 65, 108, 0.12);
+}
+
+[data-nttbell="icon"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.25s ease;
+}
+
+[data-nttbell="icon"] svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+button[data-nttbell="navbar-item"][aria-pressed="true"] [data-nttbell="icon"] {
+  transform: scale(1.15);
+  filter: drop-shadow(0 2px 6px rgba(255, 0, 77, 0.25));
+}
+
+/* ==========================================
+   BASE & HEADER PANEL PENGATURAN
+========================================== */
+[data-nttbell="view"] {
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--nttbell-bg);
+  color: var(--nttbell-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  animation: nttbellFadeIn 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes nttbellFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-nttbell="view-header"] {
+  flex: 0 0 auto;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--nttbell-border);
+  background: color-mix(in srgb, var(--nttbell-bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+[data-nttbell="back-button"] {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--nttbell-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+[data-nttbell="back-button"]:hover {
+  background: var(--nttbell-surface);
+  color: var(--nttbell-text);
+}
+
+[data-nttbell="back-button"]:active {
+  transform: scale(0.92);
+}
+
+[data-nttbell="view-title"] {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+[data-nttbell="view-subtitle"] {
+  font-size: 10px;
+  color: var(--nttbell-muted);
+}
+
+/* ==========================================
+   MAIN CONTENT (COMPACT MODE)
+========================================== */
+[data-nttbell="view-content"] {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--nttbell-scrollbar) transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+[data-nttbell="view-content"]::-webkit-scrollbar {
+  width: 5px;
+}
+[data-nttbell="view-content"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-nttbell="view-content"]::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--nttbell-scrollbar);
+}
+
+/* ==========================================
+   CARD GROUPS (Wadah Hemat Ruang)
+========================================== */
+[data-nttbell="card-group"] {
+  background: var(--nttbell-surface);
+  border: 1px solid var(--nttbell-border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* ==========================================
+   MASTER CARD (Desain Mewah Gradien)
+========================================== */
+[data-nttbell="master-card"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+[data-nttbell="master-info"] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+[data-nttbell="master-icon"] {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--nttbell-icon-bg);
+  color: var(--nttbell-muted);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-nttbell="master-card"][data-enabled="true"] [data-nttbell="master-icon"] {
+  background: var(--nttbell-accent-grad);
+  color: #fff;
+  box-shadow: 0 3px 10px var(--nttbell-accent-glow);
+}
+
+[data-nttbell="master-text"] strong {
+  font-size: 13px;
+  font-weight: 650;
+  display: block;
+}
+
+[data-nttbell="master-status"] {
+  font-size: 10px;
+  color: var(--nttbell-muted);
+}
+[data-nttbell="master-card"][data-enabled="true"]
+  [data-nttbell="master-status"] {
+  color: var(--nttbell-accent-solid);
+  font-weight: 600;
+}
+
+/* ==========================================
+   SETTINGS LIST & ROWS (Sangat Mampat)
+========================================== */
+[data-nttbell="section-header"] {
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+[data-nttbell="section-title"] {
+  margin: 0 0 2px 0;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nttbell-muted);
+}
+
+[data-nttbell="section-description"] {
+  margin: 0;
+  font-size: 10px;
+  color: var(--nttbell-muted);
+}
+
+[data-nttbell="settings-list"] {
+  display: flex;
+  flex-direction: column;
+  background: var(--nttbell-bg);
+  border-radius: 10px;
+  border: 1px solid var(--nttbell-border-light);
+  overflow: hidden;
+}
+
+[data-nttbell="setting-row"] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--nttbell-border-light);
+  transition: background 0.15s ease;
+}
+
+[data-nttbell="setting-row"]:last-child {
+  border-bottom: none;
+}
+
+[data-nttbell="setting-row"]:hover {
+  background: var(--nttbell-surface-hover);
+}
+
+[data-nttbell="setting-icon"] {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--nttbell-icon-bg);
+  color: var(--nttbell-muted);
+}
+
+[data-nttbell="setting-text"] {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+[data-nttbell="setting-text"] strong {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-nttbell="setting-text"] span {
+  font-size: 10px;
+  color: var(--nttbell-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================
+   TOGGLE SWITCH (Desain Mewah Gradien)
+========================================== */
+[data-nttbell="switch"] {
+  position: relative;
+  width: 34px;
+  height: 20px;
+  flex: 0 0 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--nttbell-switch-off);
+  cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-nttbell="switch"][aria-pressed="true"] {
+  background: var(--nttbell-accent-grad);
+}
+
+[data-nttbell="switch-track"] {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+[data-nttbell="switch-thumb"] {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-nttbell="switch"][aria-pressed="true"] [data-nttbell="switch-thumb"] {
+  transform: translateX(14px);
+}
+
+/* ==========================================
+   INTENSITY SLIDER
+========================================== */
+[data-nttbell="intensity-header"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+[data-nttbell="intensity-text"] strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+[data-nttbell="blur-value"] {
+  background: var(--nttbell-icon-bg);
+  color: var(--nttbell-text);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-nttbell="slider-wrapper"] {
+  padding: 0 4px 4px;
+}
+
+[data-nttbell="blur-slider"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: var(--nttbell-border);
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+}
+
+[data-nttbell="blur-slider"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--nttbell-bg);
+  border: 2px solid var(--nttbell-accent-solid);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+[data-nttbell="blur-slider"]::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+}
+
+/* ==========================================
+   FOOTER (Coded with ❤️)
+========================================== */
+[data-nttbell="footer"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0 10px;
+  color: var(--nttbell-muted);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+[data-nttbell="footer"] span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================
+   GLOBAL BLUR ENGINE UTILITY
+========================================== */
+.nttbell-privacy-blur {
+  filter: blur(var(--nttbell-blur, 6px)) grayscale(20%);
+  transition: filter 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.nttbell-privacy-blur:hover {
+  filter: blur(0) grayscale(0%);
+}
+
+/* ==========================================
+   DISABLED STATES (KONDISI MASTER OFF)
+========================================== */
+[data-nttbell="card-group"][data-master-active="false"] {
+  opacity: 0.5;
+  filter: grayscale(40%);
+  pointer-events: none;
+}
+
+[data-nttbell="card-group"][data-master-active="false"] button,
+[data-nttbell="card-group"][data-master-active="false"] input {
+  pointer-events: auto;
+  cursor: not-allowed !important;
+}
+
+[data-nttbell="card-group"][data-master-active="false"]
+  [data-nttbell="setting-row"]:hover {
+  background: transparent;
+}
+
+/* ==========================================
+   TOAST NOTIFICATION (SHORTCUT FEEDBACK)
+========================================== */
+[data-nttbell="toast"] {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px 8px 8px;
+  background: var(--nttbell-surface);
+  border: 1px solid var(--nttbell-border);
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: var(--nttbell-text);
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.3s ease;
+}
+
+[data-nttbell="toast"].show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+[data-nttbell="toast-icon"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--nttbell-icon-bg);
+  color: var(--nttbell-muted);
+  transition: all 0.3s ease;
+}
+
+[data-nttbell="toast"][data-active="true"] [data-nttbell="toast-icon"] {
+  background: var(--nttbell-accent-grad);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--nttbell-accent-glow);
+}

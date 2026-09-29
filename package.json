@@ -1,0 +1,16 @@
+﻿{
+  "name": "nttbell-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.326",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  }
+}
