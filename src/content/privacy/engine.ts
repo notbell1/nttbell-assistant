@@ -56,20 +56,8 @@ const MESSAGE_TEXT_SELECTORS = [
   '[data-testid="message-text"]',
   "span.selectable-text",
 ];
-
-/**
- * Profile-picture selectors supplied by selectors.ts.
- */
 const PROFILE_PICTURE_SELECTORS = [...PRIVACY_SELECTORS.profilePictures];
-
-/**
- * Media selectors supplied by selectors.ts.
- */
 const MEDIA_SELECTORS = [...PRIVACY_SELECTORS.media];
-
-/**
- * File selectors supplied by selectors.ts.
- */
 const FILE_SELECTORS = [...PRIVACY_SELECTORS.files];
 
 /* =========================================================
@@ -117,12 +105,6 @@ export async function startPrivacyEngine(
 
   scheduleScan();
 }
-
-/**
- * Update privacy settings.
- *
- * Settings are stored persistently.
- */
 export async function updatePrivacySettings(
   settings: PrivacyEngineSettings,
 ): Promise<void> {
@@ -134,10 +116,6 @@ export async function updatePrivacySettings(
 
   scheduleScan();
 }
-
-/**
- * Get current settings.
- */
 export function getPrivacySettings(): PrivacyEngineSettings | null {
   if (!privacySettings) {
     return null;
@@ -147,10 +125,6 @@ export function getPrivacySettings(): PrivacyEngineSettings | null {
     ...privacySettings,
   };
 }
-
-/**
- * Stop privacy engine and remove Nttbell blur.
- */
 export function stopPrivacyEngine(): void {
   if (observer) {
     observer.disconnect();
@@ -174,17 +148,9 @@ export function stopPrivacyEngine(): void {
   privacySettings = null;
   engineStarted = false;
 }
-
-/**
- * Request a new privacy scan.
- */
 export function scanPrivacyTargets(): void {
   scheduleScan();
 }
-
-/**
- * Update blur intensity.
- */
 export function updateBlurIntensity(intensity: number): void {
   if (!privacySettings) {
     return;
@@ -430,10 +396,6 @@ function processMessages(): void {
     applyBlur(element, getBlurIntensity());
   });
 }
-
-/**
- * Get actual message text elements.
- */
 function getMessageElements(): HTMLElement[] {
   const elements: HTMLElement[] = [];
 
@@ -618,10 +580,6 @@ function getChatPreviewElements(): HTMLElement[] {
 
   return uniqueElements(elements);
 }
-
-/**
- * Only the actual last-msg-status root.
- */
 function isPreviewStatusElement(element: HTMLElement): boolean {
   return element.matches('[data-testid="last-msg-status"]');
 }
@@ -833,16 +791,6 @@ function getFileElements(): HTMLElement[] {
 /* =========================================================
  * PROTECTED METADATA
  * ========================================================= */
-
-/**
- * Protect sensitive UI elements that must remain sharp.
- *
- * Protected:
- * - message time
- * - message status
- * - preview status
- * - sidebar time
- */
 function cleanupProtectedMetadata(): void {
   /*
    * =======================================================
@@ -918,13 +866,6 @@ function cleanupProtectedMetadata(): void {
       removeBlurDeep(element);
     });
 }
-
-/**
- * Protect one status SVG locally.
- *
- * The walk is deliberately limited to a few
- * visual wrappers.
- */
 function protectStatusSvg(svg: SVGElement): void {
   /*
    * Find nearest known status root.
@@ -1044,10 +985,6 @@ function isWhatsAppStatusTitle(title: string): boolean {
 
   return STATUS_TITLE_KEYWORDS.some((keyword) => normalized.includes(keyword));
 }
-
-/**
- * Protect status icons inside a preview/status root.
- */
 function protectStatusInside(container: HTMLElement): void {
   container.querySelectorAll<SVGElement>("svg title").forEach((svg) => {
     const title = svg.querySelector("title");
@@ -1135,14 +1072,6 @@ function shouldIgnoreElement(element: Element): boolean {
 
   return false;
 }
-
-/**
- * Check whether an element contains visible text
- * or visual content.
- *
- * This allows names containing emoji to be treated
- * as a single privacy target.
- */
 function hasVisibleTextOrContent(element: HTMLElement): boolean {
   if (element.textContent?.trim()) {
     return true;
@@ -1154,11 +1083,6 @@ function hasVisibleTextOrContent(element: HTMLElement): boolean {
 
   return false;
 }
-
-/**
- * Determine whether an element is inside a contact
- * or group name target.
- */
 function isInsideContactNameContainer(element: Element): boolean {
   return Boolean(
     element.closest(
@@ -1170,10 +1094,6 @@ function isInsideContactNameContainer(element: Element): boolean {
     ),
   );
 }
-
-/**
- * Check whether an ancestor is already blurred.
- */
 function hasBlurredAncestor(element: Element): boolean {
   let parent = element.parentElement;
 
@@ -1187,10 +1107,6 @@ function hasBlurredAncestor(element: Element): boolean {
 
   return false;
 }
-
-/**
- * Determine whether an element represents sidebar time.
- */
 function isLikelyTimeElement(element: HTMLElement): boolean {
   /*
    * Exact sidebar timestamp container.

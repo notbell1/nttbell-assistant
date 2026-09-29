@@ -297,9 +297,7 @@ function isStatusElement(element: HTMLElement): boolean {
     if (element.matches(STATUS_SELECTOR_LIST.join(","))) {
       return true;
     }
-  } catch {
-    // Ignore invalid selector.
-  }
+  } catch {}
 
   return false;
 }
@@ -411,9 +409,7 @@ function isLikelyTimestamp(element: HTMLElement): boolean {
     if (element.matches(TIMESTAMP_SELECTOR_LIST.join(","))) {
       return true;
     }
-  } catch {
-    // Ignore.
-  }
+  } catch {}
 
   const text = element.textContent?.trim() ?? "";
 
@@ -461,9 +457,7 @@ function isLikelyUnreadCount(element: HTMLElement): boolean {
     if (element.matches(UNREAD_SELECTOR_LIST.join(","))) {
       return true;
     }
-  } catch {
-    // Ignore.
-  }
+  } catch {}
 
   const text = element.textContent?.trim() ?? "";
 
@@ -586,9 +580,7 @@ function isAvatarElement(element: HTMLElement): boolean {
     if (element.matches('img[data-testid*="group" i]')) {
       return true;
     }
-  } catch {
-    // Ignore.
-  }
+  } catch {}
 
   return false;
 }

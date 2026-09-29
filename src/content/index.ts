@@ -4,21 +4,8 @@ import { initNttbellGlobalShortcuts } from "./ui/nttbell-view"; // Wajib di-impo
 
 function initialize(): void {
   console.log("[Nttbell] Content script loaded.");
-
-  /**
-   * WhatsApp navigation.
-   */
   startWhatsAppObserver();
-
-  /**
-   * Privacy engine.
-   */
   startPrivacyEngine();
-
-  /**
-   * Mengaktifkan Global Shortcut (Ctrl + Shift + U)
-   * dan sistem Toast Notifikasi.
-   */
   initNttbellGlobalShortcuts();
 }
 

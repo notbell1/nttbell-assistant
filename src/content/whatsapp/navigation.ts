@@ -21,10 +21,7 @@ export function injectNttbellButton(): void {
     const metaAIButton = document.querySelector<HTMLButtonElement>(
       WHATSAPP_SELECTORS.metaAI,
     );
-
-    // SKENARIO 1: Meta AI ditemukan
     if (metaAIButton) {
-      // Traverse ke atas 3 tingkat untuk keluar dari container Meta AI
       const metaAIDivInner = metaAIButton.parentElement;
       if (!metaAIDivInner) return;
 
@@ -36,21 +33,11 @@ export function injectNttbellButton(): void {
 
       const navbarContainer = metaAIDivOuter.parentElement;
       if (!navbarContainer) return;
-
-      /**
-       * Jangan membuat duplicate.
-       */
       if (navbarContainer.querySelector('button[data-nttbell="navbar-item"]')) {
         return;
       }
-
-      /**
-       * Nttbell menjadi sibling langsung setelah blok keseluruhan Meta AI.
-       */
       navbarContainer.insertBefore(nttbellItem, metaAIDivOuter.nextSibling);
-    }
-    // SKENARIO 2 (FALLBACK): Meta AI tidak ada
-    else {
+    } else {
       const primaryNavbarContainer = document.querySelector<HTMLDivElement>(
         '[data-testid="navbar-primary-section"] > div > div',
       );

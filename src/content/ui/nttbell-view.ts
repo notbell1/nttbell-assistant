@@ -116,8 +116,6 @@ function buildPrivacySettings(): PrivacyEngineSettings {
 
 function applyPrivacySettings(): void {
   privacySettings = buildPrivacySettings();
-
-  // Terapkan variabel CSS Blur secara Global
   document.documentElement.style.setProperty(
     "--nttbell-blur",
     `${privacySettings.blurIntensity}px`,
@@ -125,8 +123,6 @@ function applyPrivacySettings(): void {
 
   updatePrivacySettings(privacySettings);
   void savePrivacySettings(privacySettings);
-
-  // Paksa engine merender ulang
   startPrivacyEngine(privacySettings);
 }
 
@@ -453,10 +449,6 @@ function updateSettingsAvailability(): void {
     }
   }
 }
-
-// ==========================================
-// TOAST NOTIFICATION LOGIC
-// ==========================================
 function showNttbellToast(message: string, isActive: boolean): void {
   const existingToast = document.getElementById("nttbell-toast");
   if (existingToast) existingToast.remove();
@@ -485,10 +477,6 @@ function showNttbellToast(message: string, isActive: boolean): void {
     setTimeout(() => toast.remove(), 300);
   }, 2500);
 }
-
-// ==========================================
-// GLOBAL SHORTCUT LOGIC
-// ==========================================
 export function initNttbellGlobalShortcuts(): void {
   initializePrivacyState();
 
@@ -498,7 +486,6 @@ export function initNttbellGlobalShortcuts(): void {
   );
 
   document.addEventListener("keydown", (event: KeyboardEvent) => {
-    // Pengamanan Ekstra: Mendeteksi code "KeyU" ATAU tombol "u" / "U"
     if (
       event.ctrlKey &&
       event.shiftKey &&

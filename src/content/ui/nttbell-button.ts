@@ -25,8 +25,6 @@ export function createNttbellItem(): HTMLDivElement {
   const icon = document.createElement("span");
   icon.setAttribute(NTTBELL_ITEM_ATTRIBUTE, NTTBELL_ICON_VALUE);
   icon.setAttribute("aria-hidden", "true");
-
-  // Icon modern: Shield + Keyhole dengan gradasi Red/Orange
   icon.innerHTML = `
     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
       <defs>

@@ -7,15 +7,9 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const contentEntry = resolve(
-  __dirname,
-  "src/content/index.ts",
-);
+const contentEntry = resolve(__dirname, "src/content/index.ts");
 
-const contentCssSource = resolve(
-  __dirname,
-  "src/content/ui/styles.css",
-);
+const contentCssSource = resolve(__dirname, "src/content/ui/styles.css");
 
 function buildContentScript() {
   return {
@@ -27,28 +21,19 @@ function buildContentScript() {
       await esbuild({
         entryPoints: [contentEntry],
         bundle: true,
-        outfile: resolve(
-          __dirname,
-          "dist/content.js",
-        ),
+        outfile: resolve(__dirname, "dist/content.js"),
         format: "iife",
         platform: "browser",
         target: "chrome120",
         minify: false,
         sourcemap: false,
-        tsconfig: resolve(
-          __dirname,
-          "tsconfig.json",
-        ),
+        tsconfig: resolve(__dirname, "tsconfig.json"),
       });
 
       if (fs.existsSync(contentCssSource)) {
         fs.copyFileSync(
           contentCssSource,
-          resolve(
-            __dirname,
-            "dist/content.css",
-          ),
+          resolve(__dirname, "dist/content.css"),
         );
       }
 
@@ -58,31 +43,23 @@ function buildContentScript() {
       );
 
       console.log("✓ content.js built");
+
       console.log("✓ content.css copied");
+
       console.log("✓ manifest.json copied");
     },
   };
 }
 
 export default defineConfig({
-  plugins: [
-    buildContentScript(),
-  ],
+  plugins: [buildContentScript()],
 
   build: {
     emptyOutDir: true,
 
     rollupOptions: {
       input: {
-        popup: resolve(
-          __dirname,
-          "src/popup/index.html",
-        ),
-
-        background: resolve(
-          __dirname,
-          "src/background/index.ts",
-        ),
+        background: resolve(__dirname, "src/background/index.ts"),
       },
 
       output: {
@@ -96,11 +73,9 @@ export default defineConfig({
           return "assets/[name].js";
         },
 
-        chunkFileNames:
-          "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
 
-        assetFileNames:
-          "assets/[name][extname]",
+        assetFileNames: "assets/[name][extname]",
       },
     },
   },
