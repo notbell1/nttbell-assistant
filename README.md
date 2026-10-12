@@ -1,293 +1,249 @@
-<p align="center">
-  <img src="public/icon128.png" alt="Nttbell Assistant Logo" width="96" height="96" style="border-radius: 20%;" />
-</p>
+<div align="center">
 
-<h1 align="center">🛡️ Nttbell Assistant</h1>
+  <img src="public/icons/icon128.png" alt="Nttbell Assistant Logo" width="100" height="100" />
+
+  # 🛡️ Nttbell Assistant
+  
+  **Next-Generation Visual Privacy & Screen Shield for WhatsApp Web**
+  
+  *Perlindungan visual privasi percakapan tingkat lanjut — aman dari intipan layar di tempat umum, kantor, dan presentasi.*
+
+  <p>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://vite.dev/">
+      <img src="https://img.shields.io/badge/Vite-7.1-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    </a>
+    <a href="https://developer.chrome.com/docs/extensions/mv3/intro/">
+      <img src="https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3" />
+    </a>
+    <a href="#keamanan">
+      <img src="https://img.shields.io/badge/Privacy-100%25%20Local-10b981?style=for-the-badge" alt="100% Local" />
+    </a>
+  </p>
+
+  <p>
+    <a href="#preview">📸 Preview</a> &nbsp;•&nbsp;
+    <a href="#fitur">✨ Fitur Utama</a> &nbsp;•&nbsp;
+    <a href="#arsitektur">🛠️ Arsitektur</a> &nbsp;•&nbsp;
+    <a href="#instalasi">📦 Instalasi</a> &nbsp;•&nbsp;
+    <a href="#penggunaan">💬 Penggunaan</a> &nbsp;•&nbsp;
+    <a href="#keamanan">🔐 Privasi</a> &nbsp;•&nbsp;
+    <a href="#lisensi">📄 Lisensi</a>
+  </p>
+
+</div>
+
+---
+
+<a id="preview"></a>
+## 📸 Preview Tampilan
+
+Perlindungan visual instan dan adaptif terhadap seluruh elemen sensitif di WhatsApp Web:
 
 <p align="center">
-  <strong>Next-Generation Privacy & Screen Shield for WhatsApp Web</strong><br>
-  <em>Perlindungan visual privasi percakapan tingkat lanjut — bebas intipan di tempat umum, kantor, dan presentasi.</em>
-</p>
-
-<p align="center">
-  <a href="https://github.com/notbell1/nttbell-assistant/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License" />
-  </a>
-  <a href="https://www.typescriptlang.org/">
-    <img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  </a>
-  <a href="https://vitejs.dev/">
-    <img src="https://img.shields.io/badge/Vite-7.1-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  </a>
-  <a href="https://developer.chrome.com/docs/extensions/mv3/intro/">
-    <img src="https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Manifest V3" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Privacy-100%25%20Local-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="100% Local" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="#-preview--tampilan">📸 Preview</a> •
-  <a href="#-fitur-unggulan">✨ Fitur Utama</a> •
-  <a href="#-panduan-instalasi">📦 Instalasi</a> •
-  <a href="#-cara-penggunaan">💬 Penggunaan</a> •
-  <a href="#-arsitektur--teknologi">🛠️ Arsitektur</a> •
-  <a href="#-keamanan--privasi">🔐 Privasi</a> •
-  <a href="#-lisensi">📄 Lisensi</a>
+  <img src="screenshots/blur.jpeg" alt="Nttbell Assistant Privacy Blur Showcase" width="100%" />
 </p>
 
 ---
 
+<a id="tentang"></a>
 ## 🌟 Tentang Nttbell Assistant
 
-**Nttbell Assistant** adalah ekstensi browser modern berperforma tinggi yang dirancang khusus untuk melindungi layar WhatsApp Web Anda dari pandangan orang lain (*shoulder surfing*). Baik saat bekerja di kafe, co-working space, ruang kuliah, maupun saat sedang melakukan *screen sharing* / presentasi daring.
+**Nttbell Assistant** adalah ekstensi browser modern berperforma tinggi yang dirancang khusus untuk melindungi layar WhatsApp Web Anda dari pandangan orang sekitar (*shoulder surfing*). Solusi sempurna saat Anda:
 
-Dibuat dengan standar **Chrome Manifest V3**, ekstensi ini menyatu secara natural (*native seamless integration*) dengan antarmuka WhatsApp Web tanpa merusak tata letak asli, serta beroperasi **100% secara lokal** tanpa ketergantungan server eksternal, backend, maupun analitik.
+- ☕ Bekerja di kafe atau ruang publik (*co-working space*).
+- 🏢 Berada di kantor, ruang rapat, atau kelas kampus.
+- 🖥️ Melakukan *screen sharing* saat presentasi daring (*Google Meet, Zoom, Teams*).
 
-> 💡 **Prinsip Utama:** Privasi total visual Anda adalah prioritas. Anda memiliki kontrol penuh atas apa yang ingin Anda sembunyikan dan kapan Anda ingin melihatnya.
-
----
-
-## 📸 Preview & Tampilan
-
-Lihat bagaimana Nttbell Assistant mengaburkan informasi sensitif secara elegan dan seketika:
-
-<p align="center">
-  <img src="screenshots/blur.jpeg" alt="Nttbell Assistant Privacy Blur Showcase" width="920" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
-</p>
+Dibangun di atas arsitektur **Chrome Manifest V3**, Nttbell Assistant terintegrasi mulus (*native dock UI*) di bilah navigasi WhatsApp Web dan beroperasi **100% lokal** di peramban Anda tanpa pengiriman data ke server eksternal mana pun.
 
 ---
 
-## ✨ Fitur Unggulan
+<a id="fitur"></a>
+## ✨ Fitur Utama
 
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🛡️ Master Privacy Toggle</h3>
-      <p>Aktifkan atau nonaktifkan seluruh proteksi privasi hanya dengan satu klik instan kapan pun Anda membutuhkannya.</p>
-    </td>
-    <td width="50%">
-      <h3>🎯 Granular Privacy Controls</h3>
-      <p>Pilih elemen spesifik yang ingin disamarkan secara independen tanpa membatasi elemen lainnya.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🎚️ Dynamic Blur Intensity</h3>
-      <p>Atur tingkat ketebalan efek blur secara presisi dari halus (subtle) hingga buram total melalui slider interaktif.</p>
-    </td>
-    <td width="50%">
-      <h3>👁️ Smart Hover to Reveal</h3>
-      <p>Arahkan kursor pada elemen yang diburamkan untuk melihat isinya sementara. Blur akan langsung aktif kembali saat kursor menjauh.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🎨 Native Seamless UI Dock</h3>
-      <p>Menu Nttbell tertanam rapi di bilah navigasi WhatsApp Web (tepat di bawah Meta AI) dan mendukung adaptasi tema <em>Light & Dark Mode</em>.</p>
-    </td>
-    <td width="50%">
-      <h3>⚡ Zero External Footprint</h3>
-      <p>Tidak ada database eksternal, tidak ada API tracking, dan tidak ada server luar. Semua konfigurasi tersimpan aman di peramban Anda.</p>
-    </td>
-  </tr>
-</table>
-
-### 🧩 Kategori Proteksi yang Didukung
-
-| Kategori | Deskripsi Proteksi |
-| :--- | :--- |
-| 💬 **Messages** | Memburamkan seluruh isi teks percakapan di dalam ruang obrolan. |
-| 👤 **Contact Names** | Menyembunyikan nama kontak dan grup agar tidak terbaca oleh orang sekitar. |
-| 🖼️ **Profile Pictures** | Memburamkan foto profil (*avatar*) di daftar kontak maupun header chat. |
-| 📸 **Media** | Menyembunyikan preview gambar, video, dan animasi stiker. |
-| 📁 **Files & Documents** | Memburamkan nama dan lampiran dokumen yang dikirimkan. |
-| 👁️ **Chat Preview** | Mengaburkan cuplikan pesan terakhir pada daftar obrolan di bilah sisi (*sidebar*). |
+- 🛡️ **Master Privacy Toggle** — Saklar utama untuk mengaktifkan atau menonaktifkan seluruh perlindungan dengan sekali klik.
+- 🎯 **Granular Privacy Filter** — Kebebasan memilih elemen apa saja yang ingin diburamkan sesuai kebutuhan:
+  - 💬 **Messages:** Menyembunyikan seluruh isi balon pesan teks.
+  - 👤 **Contact Names:** Menyamarkan nama kontak pribadi maupun grup obrolan.
+  - 🖼️ **Profile Pictures:** Mengaburkan foto profil / avatar kontak.
+  - 📸 **Media Content:** Memburamkan pratinjau gambar, video, dan stiker.
+  - 📁 **Files & Documents:** Menyamarkan nama file dan dokumen lampiran.
+  - 👁️ **Chat List Preview:** Memburamkan cuplikan pesan terakhir di daftar chat sebelah kiri.
+- 🎚️ **Adjustable Blur Intensity** — Kendali presisi tingkat ketebalan efek blur melalui slider interaktif (default: `6px`).
+- 👁️ **Smart Hover-to-Reveal** — Arahkan kursor (*hover*) pada elemen yang diburamkan untuk melihat konten sementara tanpa perlu mematikan perlindungan.
+- 🎨 **Native WhatsApp Web Integration** — Tombol menu tertanam rapi di bilah navigasi kiri WhatsApp Web (tepat di bawah Meta AI) serta mendukung *Light Mode* & *Dark Mode*.
+- ⚡ **Zero External Latency** — Berjalan mandiri tanpa database eksternal, akun login, maupun API pihak ketiga.
 
 ---
 
-## 🛠️ Arsitektur & Teknologi
+<a id="arsitektur"></a>
+## 🛠️ Arsitektur & Cara Kerja
 
-Nttbell Assistant dibangun dengan standar arsitektur modern berorientasi performa tinggi dan nol *latency*:
+Nttbell Assistant mengamati perubahan DOM WhatsApp Web secara reaktif dan menerapkan filter CSS perangkat keras (*hardware-accelerated CSS blur*) secara instan:
 
 ```mermaid
-flowchart LR
-    A[WhatsApp Web DOM] -->|Mutations Observed| B(DOM MutationObserver)
-    B --> C{Nttbell Privacy Engine}
-    D[Chrome Storage API] -->|User Settings & Blur Level| C
-    C -->|CSS Style Engine Injection| E[Dynamic Visual Shield]
-    E -->|Interactive Peek| F[Hover to Reveal Handler]
+graph LR
+    A["WhatsApp Web DOM"] --> B["DOM Observer Engine"]
+    B --> C["Nttbell Privacy Engine"]
+    D["Chrome Local Storage"] --> C
+    C --> E["Dynamic CSS Blur Shield"]
+    E --> F["Smart Hover Reveal"]
 ```
 
-### 🧰 Tech Stack
+### 🧰 Spesifikasi Teknologi
 
-- **Core:** [TypeScript](https://www.typescriptlang.org/) — Menjamin kode yang *type-safe*, modular, dan kokoh.
-- **Build Tool:** [Vite](https://vitejs.dev/) — Bundling super cepat dengan output distribusi yang teroptimasi.
-- **Platform:** [Chrome Extension Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/) — Standar keamanan dan efisiensi memori ekstensi Chrome terbaru.
-- **Styling:** CSS3 Hardware-Accelerated Filters (`backdrop-filter` & `filter: blur()`).
-- **Reactive Engine:** Native DOM `MutationObserver` untuk mendeteksi perubahan dinamis chat WhatsApp Web secara *real-time*.
-- **State Persistence:** `chrome.storage.local` untuk menyimpan preferensi tanpa latensi jaringan.
+| Komponen | Spesifikasi & Penggunaan |
+| :--- | :--- |
+| **Bahasa Pemrograman** | [TypeScript 5.9](https://www.typescriptlang.org/) — Menjamin kode yang *type-safe* dan modular |
+| **Build Tool** | [Vite 7.1](https://vite.dev/) — Kompilasi super cepat dan optimasi bundle produksi |
+| **Ekstensi Standar** | [Chrome Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/) — Efisien memori dan memenuhi standar Chrome modern |
+| **Reactive Observer** | Native `MutationObserver` — Mendeteksi chat baru secara *real-time* tanpa lag |
+| **Penyimpanan Lokal** | `chrome.storage.local` — Menyimpan preferensi pengguna langsung di browser |
 
 ---
 
+<a id="instalasi"></a>
 ## 📦 Panduan Instalasi
 
-Karena Nttbell Assistant didistribusikan secara *open-source*, Anda dapat memasangnya langsung ke Google Chrome atau browser berbasis Chromium lainnya (Edge, Brave, Opera, Arc).
+Nttbell Assistant dapat dipasang langsung pada Google Chrome, Microsoft Edge, Brave, Opera, atau browser berbasis Chromium lainnya.
 
-### 1️⃣ Unduh / Clone Repository
+### Langkah 1: Clone atau Download Repository
 
-Gunakan Git CLI:
 ```bash
 git clone https://github.com/notbell1/nttbell-assistant.git
 cd nttbell-assistant
 ```
 
-*Atau unduh file ZIP melalui tombol hijau **`Code` ➜ `Download ZIP`** di GitHub dan ekstrak foldernya.*
+*(Atau klik tombol hijau **Code** ➜ **Download ZIP**, kemudian ekstrak foldernya).*
 
----
+### Langkah 2: Install Dependensi
 
-### 2️⃣ Pasang Dependencies
-
-Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) (versi 18+ disarankan). Jalankan perintah berikut di terminal:
+Pastikan [Node.js](https://nodejs.org/) sudah terpasang di komputer Anda.
 
 ```bash
 npm install
 ```
 
----
+### Langkah 3: Build Ekstensi
 
-### 3️⃣ Kompilasi / Build Ekstensi
-
-Jalankan perintah build untuk menghasilkan paket siap pakai:
+Jalankan perintah kompilasi produksi:
 
 ```bash
-# Validasi tipe TypeScript
+# Validasi tipe
 npm run typecheck
 
-# Kompilasi production build
+# Kompilasi paket ekstensi
 npm run build
 ```
 
-Setelah selesai, folder distribusi `dist/` akan otomatis terbuat di root proyek.
+Setelah proses selesai, folder `dist` akan otomatis dibuat.
 
----
-
-### 4️⃣ Pasang Ekstensi ke Google Chrome
+### Langkah 4: Load Unpacked ke Google Chrome
 
 1. Buka browser **Google Chrome**.
-2. Masuk ke halaman pengelolaan ekstensi:
+2. Kunjungi halaman ekstensi:
    ```text
    chrome://extensions/
    ```
-3. Aktifkan tombol **Developer mode** di pojok kanan atas.
+3. Aktifkan toggle **Developer mode** di pojok kanan atas.
 4. Klik tombol **Load unpacked** di pojok kiri atas.
-5. Arahkan dan pilih folder **`dist`** hasil kompilasi (bukan folder `src`).
-6. 🎉 **Nttbell Assistant** kini telah terpasang dan aktif!
+5. Pilih folder **`dist`** hasil build (bukan folder root atau src).
+6. Ekstensi **Nttbell Assistant** kini siap digunakan!
 
 ---
 
+<a id="penggunaan"></a>
 ## 💬 Cara Penggunaan
 
-```text
-1. Buka WhatsApp Web (web.whatsapp.com)
-   └── Pastikan ekstensi Nttbell Assistant aktif
-
-2. Akses Menu Nttbell
-   └── Temukan ikon perisai Nttbell di panel navigasi kiri (di bawah Meta AI)
-
-3. Kustomisasi Privasi
-   ├── Aktifkan Master Privacy Protection
-   ├── Centang kategori yang ingin Anda sembunyikan (Messages, Contacts, dll.)
-   └── Geser slider Blur Intensity sesuai kenyamanan mata Anda
-
-4. Mode Pengintipan (Hover-to-Reveal)
-   └── Arahkan kursor ke elemen blur untuk melihat isi sementara
-```
+1. Buka [WhatsApp Web](https://web.whatsapp.com/) di browser Chrome Anda.
+2. Temukan dan klik ikon perisai **Nttbell Assistant** di bilah navigasi kiri (tepat di bawah Meta AI).
+3. Panel kontrol privasi akan terbuka:
+   - Aktifkan **Privacy Protection** sebagai saklar utama.
+   - Pilih kategori informasi yang ingin Anda buramkan.
+   - Atur slider **Blur Intensity** sesuai tingkat keamanan visual yang diinginkan.
+4. **Mode Peek (Hover):** Saat ingin membaca pesan atau melihat foto yang disamarkan, cukup arahkan kursor mouse ke elemen tersebut. Konten akan kembali buram saat kursor menjauh.
 
 ---
 
-## ⚙️ Pengaturan Standar (Default)
+<a id="default-settings"></a>
+## 📋 Konfigurasi Bawaan (Default Settings)
 
-Saat pertama kali dipasang, ekstensi berada dalam mode *clean state* untuk kenyamanan Anda:
+Saat pertama kali dipasang, konfigurasi bawaan adalah sebagai berikut:
 
-| Parameter | Pengaturan Default | Penjelasan |
+| Pengaturan | Nilai Default | Keterangan |
 | :--- | :---: | :--- |
-| **Privacy Protection** | `OFF` | Master switch dinonaktifkan pada awal pasang |
-| **Messages** | `OFF` | Pengguna memilih secara bebas saat dibutuhkan |
-| **Contact Names** | `OFF` | Menyembunyikan identitas lawan bicara |
+| **Privacy Protection** | `OFF` | Master toggle mati saat instalasi baru |
+| **Messages** | `OFF` | Memburamkan teks obrolan |
+| **Contact Names** | `OFF` | Menyamarkan identitas kontak & grup |
 | **Profile Pictures** | `OFF` | Mengaburkan foto avatar |
-| **Media** | `OFF` | Mengaburkan konten gambar & video |
+| **Media** | `OFF` | Mengaburkan foto, video, & stiker |
 | **Files** | `OFF` | Mengaburkan berkas dokumen |
-| **Chat Preview** | `OFF` | Mengaburkan daftar obrolan sisi kiri |
-| **Blur Intensity** | `6px` | Nilai seimbang antara keterbacaan & privasi |
+| **Chat Preview** | `OFF` | Mengaburkan cuplikan daftar obrolan |
+| **Blur Intensity** | `6px` | Keseimbangan ideal privasi dan estetika |
 
 ---
 
-## 🔄 Alur Pengembangan (Development)
+<a id="development"></a>
+## 🧪 Pengembangan (Development)
 
-Bagi kontributor yang ingin mengembangkan fitur baru:
+Untuk Anda yang ingin memodifikasi atau berkontribusi pada pengembangan:
 
 ```bash
-# Jalankan mode pengembangan Vite
+# Menjalankan Vite development watch
 npm run dev
 
-# Jalankan typecheck saat ada perubahan tipe
+# Menjalankan typecheck TypeScript
 npm run typecheck
 
-# Kompilasi ulang aset
+# Melakukan production build
 npm run build
 ```
 
-> **Tips Reload:** Setelah melakukan *build*, buka `chrome://extensions/` dan klik ikon **🔄 Reload** pada kartu Nttbell Assistant, lalu lakukan *hard refresh* di WhatsApp Web (`Ctrl + Shift + R` atau `Cmd + Shift + R`).
+> **Tips Reload:** Setiap selesai melakukan perubahan dan build ulang, buka `chrome://extensions/`, klik tombol **🔄 Reload** pada kartu Nttbell Assistant, lalu lakukan *hard refresh* (`Ctrl + Shift + R`) pada tab WhatsApp Web.
 
 ---
 
+<a id="keamanan"></a>
 ## 🔐 Komitmen Privasi & Keamanan
 
-Kepercayaan pengguna adalah fondasi dari proyek ini. Kami menerapkan arsitektur **Zero-Knowledge & Zero-Data-Collection**:
+Nttbell Assistant dibangun dengan komitmen privasi mutlak (**Zero-Knowledge & Zero-Data-Collection**):
 
-- 🚫 **No Tracking:** Ekstensi tidak memiliki tracker, Google Analytics, atau skrip telemetri apa pun.
-- 🚫 **No Remote Calls:** Tidak ada permintaan jaringan (*network request*) yang dikirim ke server pihak ketiga.
-- 🚫 **No Credential Access:** Ekstensi tidak pernah membaca token, sandi, cookie, atau sesi autentikasi akun Anda.
-- 🚫 **No Message Storage:** Isi obrolan Anda tidak pernah disimpan ke mana pun.
-- 🛡️ **Pure Client-Side:** Seluruh operasi dijalankan murni di browser Anda melalui manipulasi gaya CSS visual.
-
----
-
-## ⚠️ Disklaimer & Batasan
-
-- **Visual Shield Only:** Nttbell Assistant dirancang murni sebagai *visual obfuscation tool* (penghalang visual dari pandangan mata orang sekitar). Ekstensi ini **bukan** pengganti enkripsi end-to-end atau protokol keamanan akun.
-- **WhatsApp UI Updates:** WhatsApp Web sewaktu-waktu dapat memperbarui struktur elemen DOM mereka. Jika terjadi perubahan selektor, silakan ajukan *Issue* atau *Pull Request* agar penyesuaian selektor dapat segera diperbarui.
-- **Afiliasi:** Nttbell Assistant adalah proyek independen dan **tidak berafiliasi, disponsori, atau disetujui secara resmi oleh WhatsApp LLC atau Meta Platforms, Inc.**
+- ❌ **Tidak ada Server Eksternal:** Tidak ada server backend, analitik, Supabase, atau pelacak pihak ketiga.
+- ❌ **Tidak Menyentuh Kredensial:** Ekstensi tidak pernah mengakses password, cookie sesi, atau token autentikasi WhatsApp.
+- ❌ **Tidak Menyimpan Isi Pesan:** Pesan WhatsApp Anda tidak pernah direkam, dikirim, atau diolah di luar peramban Anda.
+- ✅ **100% Client-Side:** Seluruh logika perlindungan dijalankan murni di komputer pengguna via CSS styling.
 
 ---
 
-## 🤝 Kontribusi
+<a id="disklaimer"></a>
+## ⚠️ Catatan & Disklaimer
 
-Kontribusi dari komunitas selalu diterima dengan senang hati!
-
-1. **Fork** repository ini.
-2. Buat branch fitur baru (`git checkout -b feature/FiturKeren`).
-3. Lakukan commit perubahan Anda (`git commit -m 'feat: Menambahkan fitur filter baru'`).
-4. Push ke branch Anda (`git push origin feature/FiturKeren`).
-5. Buat **Pull Request**.
+- **Perlindungan Visual:** Nttbell Assistant berfungsi sebagai pelindung visual (*visual shield*) terhadap pandangan mata langsung dan bukan pengganti enkripsi end-to-end bawaan WhatsApp.
+- **Pembaruan WhatsApp Web:** Jika WhatsApp Web memperbarui struktur DOM atau antarmukanya dan menyebabkan selektor perlu disesuaikan, silakan buat laporan melalui tab *Issues* di GitHub.
+- **Merek Dagang:** WhatsApp dan Meta adalah merek dagang dari Meta Platforms, Inc. Nttbell Assistant adalah proyek independen dan tidak terafiliasi dengan WhatsApp maupun Meta.
 
 ---
 
+<a id="author"></a>
 ## 👨‍💻 Author & Pengembang
 
-<p align="left">
-  <strong>NttBell</strong> (<em>Notbell1</em>)<br>
-  GitHub: <a href="https://github.com/notbell1">@notbell1</a>
-</p>
+Dikembangkan dengan dedikasi oleh:
+
+- **NttBell** ([@notbell1](https://github.com/notbell1))
 
 ---
 
+<a id="lisensi"></a>
 ## 📄 Lisensi
 
-Proyek ini didistribusikan di bawah lisensi resmi **[MIT License](LICENSE)**. Anda memiliki kebebasan untuk menggunakan, memodifikasi, dan mendistribusikan perangkat lunak ini sesuai dengan ketentuan lisensi.
+Proyek ini dirilis di bawah lisensi resmi **[MIT License](LICENSE)**. Bebas digunakan, dipelajari, dan dimodifikasi untuk kebutuhan personal maupun profesional.
 
 <p align="center">
-  <sub>Dibangun dengan ❤️ untuk privasi digital yang lebih baik.</sub>
+  <sub>🛡️ Nttbell Assistant — Jaga privasi percakapan Anda kapan pun dan di mana pun.</sub>
 </p>
